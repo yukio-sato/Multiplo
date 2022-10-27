@@ -21,23 +21,24 @@ for (int i = 0; i < frase.Length; i++)
     Thread.Sleep(55);
 }
 int numero2 = Convert.ToInt32(Console.ReadLine());
-if (numero % numero2 != 1)
+if ((numero % numero2) < 1)
 {
 Console.ForegroundColor = ConsoleColor.DarkGreen;
-frase = $"{numero} é multiplo\n";
+frase = $"O número {numero} é multiplo com o número {numero2}\n";
 for (int i = 0; i < frase.Length; i++)
 {
     Console.Write(frase[i]);
     Thread.Sleep(55);
 }
 }
-else if (numero % numero2 >= 1)
+else if ((numero % numero2) >= 1)
+{
 Console.ForegroundColor = ConsoleColor.Red;
-frase = $"{numero} não é multiplo\n";
+frase = $"O número {numero} não é multiplo com o número {numero2}\n";
 for (int i = 0; i < frase.Length; i++)
 {
     Console.Write(frase[i]);
     Thread.Sleep(55);
 }
-
+}
 Console.ResetColor();
